@@ -1,0 +1,104 @@
+.dark-mode-toggle-container {
+    top: 13.5rem; 
+    left: 20rem; 
+    z-index: 10; 
+}
+
+/* Stylizacja trybu ciemnego */
+body.dark-mode {
+    background-color: #42428a !important; /* Tło w ciemnym trybie */
+}
+
+body.dark-mode .top-bar {
+    background-color: #42428a !important; /* Tło górnego paska w ciemnym trybie */
+}
+
+body.dark-mode .word {
+    background-color: #7d7dc7 !important; /* Tło dla słów w ciemnym trybie */
+    color: rgb(0, 0, 0) !important; /* Kolor tekstu dla słów */
+}
+
+body.dark-mode .btn, 
+body.dark-mode .btnSzkoda {
+    background: grey !important; /* Szare tło dla przycisków */
+    color: rgb(255, 255, 255) !important; /* Biały tekst na przyciskach */
+}
+
+body.dark-mode .popup-content {
+    background: white !important; /* Białe tło dla popupu */
+    color: black !important; /* Czarny tekst w popupie */
+}
+
+body.dark-mode .heart-icon {
+    color: white; /* Kolor ikony serca na biały */
+    font-size: 1.5em; /* Rozmiar czcionki ikony serca */
+}
+
+body.dark-mode .word.selected {
+    background-color: navy !important; /* Tło dla wybranego słowa */
+    color: white !important; /* Kolor tekstu wybranego słowa */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important; /* Cień wokół wybranego słowa */
+    outline: none !important; /* Usunięcie obrysu */
+}
+
+body.dark-mode .btn:hover {
+    color: rgb(0, 0, 0) !important; /* Kolor tekstu na czarny po najechaniu */
+    width: 276px !important; /* Szerokość przycisku zmniejsza się na hover */
+    background: white !important; /* Tło przycisku zmienia się na białe */
+    border-color: rgb(218, 193, 199) !important; /* Kolor obramowania na jasny róż */
+    border-width: 0px !important; /* Usunięcie obramowania */
+    border-style: solid !important; /* Styl obramowania jako solid */
+}
+
+body.dark-mode .btn {
+    cursor: pointer !important; /* Kursor wskazujący na element klikalny */
+    border: 4px solid rgb(0, 0, 0) !important; /* Grube czarne obramowanie */
+    font-family: Roboto !important; /* Czcionka Roboto */
+    font-size: 35px !important; /* Rozmiar czcionki 35px */
+    color: rgb(255, 255, 255) !important; /* Biały tekst */
+    padding: 5px 30px !important; /* Wewnętrzne marginesy przycisku */
+    transition: 280ms !important; /* Płynne przejścia w ciągu 280ms */
+    width: 300px !important; /* Szerokość przycisku */
+    box-shadow: rgb(0, 0, 0) 10px 5px 0px 1px !important; /* Cień wokół przycisku */
+    border-radius: 15px !important; /* Zaokrąglone krawędzie przycisku */
+    background: #313171 !important; /* Tło w ciemnym odcieniu niebieskiego */
+    font-weight: 700 !important; /* Pogrubienie tekstu */
+    display: flex !important; /* Ustawienie modelu elastycznego dla przycisku */
+    justify-content: center !important; /* Wyśrodkowanie tekstu w poziomie */
+    align-items: center !important; /* Wyśrodkowanie tekstu w pionie */
+}
+
+
+body.dark-mode .word {
+    text-align: center; 
+    font-family: 'Varta';
+    font-size: 27px;
+    color: white !important;
+    padding: 9px 20px; 
+    transition: 300ms;
+    height: 53px; 
+    width: 260px; 
+    border-radius: 20px;
+    background: #7d7dc7;
+    font-weight: 900;
+    box-sizing: border-box;
+	cursor: pointer !important; 
+	margin: -5px;
+}
+
+
+body.dark-mode .caption, 
+body.dark-mode .icon,
+body.dark-mode .lives, 
+body.dark-mode .announcement {
+    color: white; /* Zmiana koloru tych elementów na biały */
+}
+
+body.dark-mode .footer-link {
+		background-color: #42428a;
+		color: white;
+}
+
+body.dark-mode .icon:hover {
+    color: navy; /* Zmiana koloru na różowy przy najechaniu */
+}

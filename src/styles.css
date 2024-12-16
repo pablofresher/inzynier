@@ -1,0 +1,523 @@
+/* styles.css*/
+/* Importowanie czcionki Roboto z Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pacifico&family=Varta:wght@300..700&display=swap');
+
+/* Ogólne style */
+html, body {
+    height: 100%; /* Ustawienie pełnej wysokości dla strony */
+    margin: 0;    /* Usunięcie marginesów */
+}
+
+body {
+    background-color: #F8F8FF!important; /* Kolor tła dla całego ciała strony */
+    font-family: 'Roboto', sans-serif; /* Użycie czcionki Roboto */
+    display: flex; /* Użycie układu elastycznego */
+    flex-direction: column; /* Ustawienie kierunku flexa na kolumny */
+}
+
+/* Styl dla górnej belki */
+.top-bar {
+    display: flex; /* Użycie układu elastycznego */
+    flex-direction: column; /* Układ w kolumnie */
+    align-items: center; /* Wyrównanie elementów na środku */
+    background-color: #F8F8FF; /* Kolor tła */
+    border-bottom: 1px solid #ddd; /* Dolna granica */
+    padding: 10px 0; /* Padding w górę i w dół */
+}
+
+/* Styl poziomej linii oddzielającej elementy */
+.horizontal-line {
+    border-top: 1px solid #000000; /* Górna granica czarna */
+    width: 100%; /* Szerokość 100% */
+    max-width: 750px; /* Maksymalna szerokość 750px */
+    margin: 10px auto; /* Automatyczne marginesy po bokach */
+	background: #22224f;
+}
+
+/* Kontener dla napisu i ikon */
+.caption-icons-container {
+    display: flex; /* Użycie układu elastycznego */
+    align-items: center; /* Wyrównanie elementów na środku w pionie */
+    justify-content: space-between; /* Rozstawienie elementów z przestrzenią między nimi */
+    width: 100%; /* Szerokość 100% */
+    max-width: 1400px; /* Maksymalna szerokość 1400px */
+    padding: 0 20px; /* Padding po bokach */
+}
+
+/* Styl dla ikon w nagłówku */
+.icon {
+    font-size: 30px; /* Rozmiar czcionki 30px */
+    margin-left: 10px; /* Margines po lewej stronie */
+    cursor: pointer; /* Kursor wskazujący, że element jest klikalny */
+    transition: color 0.3s; /* Płynna zmiana koloru przy najechaniu */
+}
+
+/* Styl po najechaniu na ikonę */
+.icon:hover {
+    color: #7d7dc7; /* Zmiana koloru na różowy przy najechaniu */
+}
+
+/* Kontener dla każdej ikony, z tooltipem */
+.icon-container {
+   /* margin-left: 10px; /* Add margin for spacing between icons */
+    display: flex; /*Needed to make sure the icons are inline*/
+    align-items: center; /* Vertically align the icon and tooltip */
+	position: relative;
+}
+
+/* Pokaż tooltip po najechaniu na kontener z ikoną */
+.icon-container:hover .tooltip {
+    display: block; /* Wyświetlenie tooltipa */
+}
+
+/* Styl dla podpisu w nagłówku */
+.caption {
+    font-family: 'Pacifico', sans-serif; /* Czcionka Roboto */
+    font-size: 2em; /* Rozmiar czcionki 2em */
+    color: #000; /* Kolor tekstu czarny */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    flex-grow: 1; /* Rozciąganie w pionie */
+    margin-left: 150px; /* Margines po lewej stronie */
+}
+
+/* Styl dla napisu 'Pozostałe próby' */
+.pozostale-proby {
+    font-size: 1.5em; /* Rozmiar czcionki 1.5em */
+}
+
+/* Style dla przycisków gry */
+.btn, .btnSzkoda {
+    cursor: pointer !important; /* Kursor wskazujący, że element jest klikalny */
+    border: 4px solid rgb(0, 0, 0) !important; /* Czarne obramowanie przycisku */
+    font-family: Roboto !important; /* Czcionka Roboto */
+    font-size: 35px !important; /* Rozmiar czcionki 35px */
+    color: rgb(255, 255, 255) !important; /* Kolor tekstu biały */
+    padding: 5px 30px !important; /* Padding wewnętrzny */
+    transition: 280ms !important; /* Płynna zmiana stylu przez 280ms */
+    width: 300px !important; /* Szerokość przycisku 300px */
+    box-shadow: rgb(0, 0, 0) 10px 5px 0px 1px !important; /* Cień przycisku */
+    border-radius: 15px !important; /* Zaokrąglenie krawędzi przycisku */
+    background: #7d7dc7 !important; /* Kolor tła przycisku */
+    font-weight: 700 !important; /* Pogrubienie czcionki */
+    display: flex !important; /* Użycie układu elastycznego */
+    justify-content: center !important; /* Wyśrodkowanie poziome */
+    align-items: center !important; /* Wyśrodkowanie pionowe */
+}
+
+/* Efekt po najechaniu na przyciski */
+.btnSzkoda:hover {
+    color: rgb(0, 0, 0) !important; /* Zmiana koloru tekstu na czarny */
+    width: 276px !important; /* Zmniejszenie szerokości przycisku */
+    border-color: rgb(218, 193, 199) !important; /* Zmiana koloru obramowania */
+    border-width: 0px !important; /* Usunięcie obramowania */
+    border-style: solid !important; /* Ustalenie stylu obramowania na solid */
+}
+.btn:hover {
+    width: 276px !important; /* Zmniejszenie szerokości przycisku */
+    background: navy !important; /* Zmiana tła na jasno-różowe */
+    border-color: rgb(218, 193, 199) !important; /* Zmiana koloru obramowania */
+    border-width: 0px !important; /* Usunięcie obramowania */
+    border-style: solid !important; /* Ustalenie stylu obramowania na solid */
+}
+
+
+/* Styl dla przycisku 'Szkoda...' */
+.btnSzkoda {
+    background: grey !important; /* Tło szare dla przycisku 'Szkoda...' */
+}
+
+
+/* Kontener dla przycisków akcji (np. losuj, wyczyść) */
+.action-buttons-container {
+    display: flex; /* Użycie układu elastycznego */
+    justify-content: center; /* Wyśrodkowanie poziome */
+    gap: 20px; /* Odstęp pomiędzy przyciskami */
+    margin: 20px 0; /* Margines w górę i w dół */
+}
+
+/* Kontener dla przycisku 'Super!' */
+.super-button-container {
+    display: flex; /* Użycie układu elastycznego */
+    justify-content: center; /* Wyśrodkowanie przycisku */
+    margin-top: 20px; /* Margines górny */
+}
+
+/* Word Grid Styles */
+/* Styl dla siatki słów */
+#word-grid {
+    display: flex; /* Użycie układu elastycznego */
+    flex-wrap: wrap; /* Zawijanie elementów w razie potrzeby */
+    justify-content: center; /* Wyśrodkowanie elementów w poziomie */
+	margin-left: 100px; /* Negative margin to counteract item margins */
+    margin-right: 100px;
+	margin-top: 12px; 
+}
+
+
+.word {
+    text-align: center; /*Center text within the .word div*/
+    font-family: 'Varta';
+    font-size: 27px;
+    color: rgb(0, 0, 0);
+    padding: 9px 20px; /*This padding might be causing the height issue. Consider reducing it*/
+    transition: 300ms;
+    height: 53px; /* This is redundant since the parent sets the height*/
+    width: 260px; /* This is redundant since the parent sets the width*/
+    /*box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;*/
+    border-radius: 20px;
+    background: #e5e5ff;
+    font-weight: 900;
+    box-sizing: border-box;
+	cursor: pointer !important; /* Kursor wskazujący, że element jest klikalny */
+	margin: -5px;
+}
+
+/* Styl dla wybranego słowa */
+.word.selected {
+    background-color: navy; /* Kolor tła dla wybranego słowa */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Cień wokół elementu */
+    outline: none; /* Usunięcie konturu */
+	color: white;
+}
+
+/* Styl dla ukończonego słowa */
+.word.completed {
+    background-color: #c3e6cb; /* Kolor tła dla ukończonego słowa */
+    color: #155724; /* Kolor tekstu na zielono */
+    box-shadow: none; /* Usunięcie cienia */
+}
+
+/* Category Styles */
+/* Styl dla ukończonych kategorii */
+.completed-categories {
+    margin: 10px 0 !important; /* Margines w górę i w dół */
+}
+
+/* Styl dla pojedynczej ukończonej kategorii */
+.completed-category {
+    padding: 2px !important; /* Padding wewnętrzny */
+    border-radius: 10px !important; /* Zaokrąglenie krawędzi */
+    margin-bottom: 10px !important; /* Margines dolny */
+    text-align: center !important; /* Wyśrodkowanie tekstu */
+    height: 75px !important; /* Wysokość elementu */
+}
+
+/* Styl dla nazwy kategorii */
+.category-name {
+    font-size: 1.5rem !important; /* Rozmiar czcionki */
+    font-weight: bold !important; /* Pogrubienie tekstu */
+}
+
+/* Styl dla słów w ukończonych kategoriach */
+.completed-words {
+    font-size: 1.2rem !important; /* Rozmiar czcionki */
+}
+
+/* Styl dla liczby żyć i ogłoszeń */
+.lives, .announcement {
+    font-size: 1.4rem; /* Rozmiar czcionki */
+    font-weight: bold; /* Pogrubienie tekstu */
+}
+
+/* Styl dla ogłoszeń */
+.announcement {
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+/* Footer styles */
+/* Styl dla stopki */
+.footer {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    padding: 10px; /* Padding wewnętrzny */
+    border-top: 1px solid #ddd; /* Górna granica */
+    flex-shrink: 0; /* Zapobiegnięcie zmniejszeniu rozmiaru stopki */
+}
+
+/* Styl dla linków w stopce */
+.footer-link {
+    /*margin: 0 15px; /* Margines po bokach */
+    text-decoration: none; /* Brak dekoracji tekstu */
+    color: black; /* Kolor tekstu czarny */
+	border: none;
+	background-color: #F8F8FF;
+}
+
+/* Styl po najechaniu na linki w stopce */
+.footer-link:hover {
+    color: #7d7dc7; /* Zmiana koloru tekstu na różowy */
+    text-decoration: underline; /* Podkreślenie tekstu */
+}
+
+/* Logo image */
+/* Styl dla obrazka logo */
+.logo-image {
+    width: 500px; /* Szerokość logo */
+    height: auto; /* Automatyczna wysokość */
+}
+
+/* Heart icon */
+/* Styl dla ikony serca */
+.heart-icon {
+    color: navy; /* Kolor ikony na różowy */
+    font-size: 1.5em; /* Rozmiar czcionki */
+}
+
+/* Popup Styles */
+/* Styl dla okienek popup */
+.popup {
+    position: fixed; /* Pozycjonowanie stałe względem okna przeglądarki */
+    top: 0; /* Ustawienie od góry */
+    left: 0; /* Ustawienie od lewej */
+    width: 100%; /* Szerokość 100% */
+    height: 100%; /* Wysokość 100% */
+    display: flex; /* Użycie układu elastycznego */
+    justify-content: center; /* Wyśrodkowanie zawartości w poziomie */
+    align-items: flex-start; /* Wyrównanie zawartości od góry */
+    background: rgba(0, 0, 0, 0.5); /* Półprzezroczyste tło, ciemne */
+    z-index: 1000; /* Ustawienie na najwyższy poziom */
+	
+}
+
+/* Styl dla zawartości okienka popup */
+.popup-content {
+    background: white; /* Białe tło */
+    padding: 40px; /* Padding wewnętrzny */
+    border-radius: 15px; /* Zaokrąglone krawędzie */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Cień wokół okienka */
+    position: relative; /* Umożliwia pozycjonowanie elementów wewnątrz */
+    width: 80%; /* Szerokość okienka */
+    max-width: 500px; /* Maksymalna szerokość */
+	top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensure true centering */
+    margin-top: 0; /* Remove previous margin */
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 80%; 
+    max-width: 500px; 
+    z-index: 1100; /* Ensure it's above other elements */
+    margin: 0; /* Remove any margin */
+    animation: slideDown 0.5s ease-out;
+}
+
+/* Styl dla dużego okienka popup z ikoną lightbulb */
+.popup-content.large.lightbulb {
+    width: 90%; /* Szerokość większa niż standardowa */
+    max-width: 1000px; /* Maksymalna szerokość */
+    max-height: 82vh; /* Maksymalna wysokość */
+    overflow-y: auto; /* Przewijanie pionowe, jeśli zawartość jest większa */
+    margin-top: 25px; /* Utrzymaj 25px marginesu od góry */
+    position: fixed; /* Pozycja względem widoku */
+    top: 50%; /* Pozycjonowanie pionowe */
+    left: 50%; /* Pozycjonowanie poziome */
+    transform: translate(-50%, -50%); /* Dostosowanie do prawdziwego środka */
+    animation: slideDown 0.5s ease-out; /* Zmiana animacji */
+}
+
+/* Styl dla zawartości instrukcji w okienku popup */
+.instructions-content {
+    /*padding: 20px 40px; /* Padding wewnętrzny */
+    display: flex; /* Użycie elastycznego układu */
+    flex-direction: column; /* Kolumnowy układ */
+    align-items: center; /* Wyrównanie w poziomie */
+}
+
+/* Styl dla obrazu w instrukcjach */
+.instructions-image {
+    width: 100%; /* Szerokość 100% */
+    max-width: 800px; /* Maksymalna szerokość */
+    height: auto; /* Automatyczna wysokość */
+    margin: 0 auto; /* Wyśrodkowanie */
+    display: block; /* Blokowy element */
+    border-radius: 8px; /* Zaokrąglenie krawędzi */
+}
+
+/* Styl dla tekstu w instrukcjach */
+.instructions-text {
+    font-size: 1.2rem; /* Rozmiar czcionki */
+    line-height: 1.6; /* Wysokość linii */
+    text-align: left; /* Wyrównanie tekstu do lewej */
+    color: #333; /* Kolor tekstu */
+   /* margin-top: 20px; /* Margines górny */
+    max-width: 800px; /* Maksymalna szerokość */
+}
+
+
+
+@keyframes slideDown {
+    /* Definicja animacji przesunięcia w dół */
+    from {
+        transform: translate(-50%, -70%) scale(0.9); /* Pozycja startowa: przesunięcie w górę i zmniejszenie skali */
+        opacity: 0; /* Element początkowo niewidoczny */
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1); /* Pozycja końcowa: wyrównanie do środka i oryginalna skala */
+        opacity: 1; /* Element staje się widoczny */
+    }
+}
+
+/* Statistics Popup Styles */
+/* Styl dla okienka popup z danymi statystycznymi */
+.popup-content.large.statistics {
+    width: 70%; /* Szerokość 70% */
+    max-width: 800px; /* Maksymalna szerokość */
+    max-height: 90vh; /* Maksymalna wysokość */
+    overflow-y: auto; /* Przewijanie pionowe */
+    margin-top: 25px; /* Odstęp od góry */
+    padding: 5px; /* Padding wewnętrzny */
+    background-color: #ffffff; /* Białe tło */
+    position: fixed; /* Pozycja stała */
+    top: 50%; /* Pozycjonowanie pionowe */
+    left: 50%; /* Pozycjonowanie poziome */
+    transform: translate(-50%, -50%); /* Dostosowanie do prawdziwego środka */
+    animation: slideDown 0.5s ease-out; /* Zmiana animacji */
+}
+
+/* Styl dla zawartości okienka statystyk */
+.statistics-content {
+    padding: 20px; /* Padding wewnętrzny */
+}
+
+/* Styl dla nagłówka w sekcji statystyk */
+.statistics-content h2 {
+    color: #333; /* Kolor tekstu */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    margin-bottom: 30px; /* Margines dolny */
+    font-size: 2rem; /* Rozmiar czcionki */
+}
+
+/* Styl dla kontenera wykresów */
+.statistics-chart-container {
+    display: flex; /* Użycie układu elastycznego */
+    justify-content: center; /* Wyśrodkowanie elementów */
+    margin: 20px 0; /* Marginesy góra-dół */
+    padding: 10px; /* Padding wewnętrzny */
+
+	
+}
+
+/* Styl dla tooltipa w wykresach */
+.statistics-tooltip {
+    background-color: #ffff; /* Białe tło */
+    border: 1px solid #ddd; /* Granica wokół tooltipa */
+    padding: 10px; /* Padding wewnętrzny */
+    border-radius: 4px; /* Zaokrąglenie krawędzi */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Cień */
+	
+}
+
+
+/* Styl dla nagłówka w popupie */
+.popup-content h2 {
+    font-size: 2.5rem; /* Rozmiar czcionki */
+    margin-bottom: 20px; /* Margines dolny */
+}
+
+/* Styl dla paragrafów w popupie */
+.popup-content p {
+    font-size: 1.4rem; /* Rozmiar czcionki */
+    margin-bottom: 30px; /* Margines dolny */
+}
+
+/* Styl dla ciekawostek w popupie */
+.fun-fact {
+    font-size: 1.2rem; /* Rozmiar czcionki */
+    font-style: italic; /* Kursywa */
+    color: #666; /* Szary kolor tekstu */
+    margin-top: 20px; /* Margines górny */
+}
+
+/* Styl dla przycisku zamknięcia w popupie */
+.close-button {
+    position: absolute; /* Pozycja absolutna */
+    top: 10px; /* Odstęp od góry */
+    right: 10px; /* Odstęp od prawej */
+    background: none; /* Brak tła */
+    border: none; /* Brak obramowania */
+    font-size: 24px; /* Rozmiar czcionki */
+    cursor: pointer; /* Kursor wskazujący, że jest klikalny */
+    padding: 5px; /* Padding wewnętrzny */
+    display: flex; /* Użycie układu elastycznego */
+    align-items: center; /* Wyrównanie do środka */
+    justify-content: center; /* Wyśrodkowanie przycisku */
+    width: 40px; /* Szerokość przycisku */
+    height: 40px; /* Wysokość przycisku */
+    border-radius: 50%; /* Zaokrąglenie krawędzi przycisku */
+    transition: background-color 0.3s; /* Płynna zmiana tła przycisku */
+}
+
+/* Styl dla przycisku zamknięcia po najechaniu */
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Zmiana tła na półprzezroczyste */
+}
+
+/* Animacja wstrząsu dla błędnych odpowiedzi */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+    20%, 40%, 60%, 80% { transform: translateX(1px); }
+}
+
+/* Dodanie animacji 'shake' do elementu z klasą .shake */
+.word.shake {
+    animation: shake 0.4s ease-in-out; /* Animacja trwa 0.4 sekundy, z łagodnym rozpoczęciem i zakończeniem */
+}
+
+.icons-caption-container {
+    display: flex; /*  flexbox */
+    align-items: center; 
+	gap: 10px;
+}
+
+.icon-container .tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.icon-container:hover .tooltip {
+    opacity: 1;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.logo-image {
+    content: url('./splotylogowhite.png');
+}
+
+.dark-mode .logo-image {
+    content: url('./splotylogodark.png');
+}
+
+.sploty {
+	
+font-family: Pacifico;
+
+}
